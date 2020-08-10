@@ -6,9 +6,7 @@ import Post from './Post.js';
 function App() {
   return (
     <div className="App">
-      <h1>
-       Lets build instagram
-      </h1>
+      
       <div className="app__header">
         <img 
           className="app__headerImage"
@@ -16,6 +14,15 @@ function App() {
         />  
       </div>
 
+      <h1>
+       Lets build instagram
+      </h1>
+
+      <Post />
+      <Post />
+      <Post />
+      <Post />
+      <Post />
       <Post />
       {/* Header */}
       {/* Posts */}
