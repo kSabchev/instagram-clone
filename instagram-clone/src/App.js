@@ -18,9 +18,9 @@ function App() {
        Lets build instagram
       </h1>
 
-      <Post />
-      <Post />
-      <Post />
+      <Post username="ksabchev" caption="caption"/>
+      <Post username="user1" caption="caption1"/>
+      <Post username="user2" caption="caption2" imageUrl="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg"/>
       <Post />
       <Post />
       <Post />
