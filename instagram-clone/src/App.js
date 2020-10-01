@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import './Post.js';
 import Post from './Post.js';
@@ -6,6 +6,7 @@ import Post from './Post.js';
 function App() {
   return (
     <div className="App">
+      const [post, setPosts] = useState([]);
       
       <div className="app__header">
         <img 
