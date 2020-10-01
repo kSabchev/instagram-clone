@@ -4,9 +4,12 @@ import './Post.js';
 import Post from './Post.js';
 
 function App() {
+
+  
+  const [post, setPosts] = useState([]);
+
   return (
     <div className="App">
-      const [post, setPosts] = useState([]);
       
       <div className="app__header">
         <img 
@@ -15,12 +18,8 @@ function App() {
         />  
       </div>
 
-      <h1>
-       Lets build instagram
-      </h1>
-
-      <Post username="ksabchev" caption="caption"/>
-      <Post username="user1" caption="caption1"/>
+      <Post username="ksabchev" caption="caption" imageUrl="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg"/>
+      <Post username="user1" caption="caption1" imageUrl="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg"/>
       <Post username="user2" caption="caption2" imageUrl="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg"/>
       <Post />
       <Post />
