@@ -6,7 +6,23 @@ import Post from './Post.js';
 function App() {
 
   
-  const [post, setPosts] = useState([]);
+  const [posts, setPosts] = useState([
+    {
+      username:"ksabchev",
+      caption:"caption",
+      imageUrl:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg",
+    },
+    {
+      username:"user1",
+      caption:"caption1", 
+      imageUrl:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg",
+    },
+    {
+      username:"user2",
+      caption:"caption2",
+      imageUrl:"https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg"
+    }
+  ]);
 
   return (
     <div className="App">
@@ -18,12 +34,15 @@ function App() {
         />  
       </div>
 
-      <Post username="ksabchev" caption="caption" imageUrl="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg"/>
-      <Post username="user1" caption="caption1" imageUrl="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg"/>
-      <Post username="user2" caption="caption2" imageUrl="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg"/>
-      <Post />
-      <Post />
-      <Post />
+
+      {
+        posts.map(post => (
+          <Post username={post.username} caption={post.caption} imageUrl={post.imageUrl}/>
+        ))
+      }
+      
+      {/* <Post />
+      <Post /> */}
       {/* Header */}
       {/* Posts */}
       {/* Posts */}
