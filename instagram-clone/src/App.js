@@ -172,13 +172,15 @@ function App() {
       </div>
 
       <div className="app__posts">
-        {user ? <h1>Hello {user.displayName}</h1> : <h1> let`s go</h1>}
+        {user ? <h1>Hello {user.displayName}</h1> : <h1> Welcome! </h1>}
       </div>
       <div className="app__posts">
         <div className="app_postsLeft">
           {posts.map(({ id, post }) => (
             <Post
               key={id}
+              postId={id}
+              user={user}
               username={post.username}
               caption={post.caption}
               imageUrl={post.imageUrl}
@@ -205,7 +207,7 @@ function App() {
       {user?.displayName ? (
         <ImageUpload username={user.displayName} />
       ) : (
-        <h3>Login to upload</h3>
+        <h3 className="app__posts">Login to upload</h3>
       )}
     </div>
   );
